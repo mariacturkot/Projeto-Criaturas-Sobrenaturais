@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OBSCURA: um atlas visual de criaturas sobrenaturais, lendas e mitologias.">
+  <meta name="theme-color" content="#12121B">
+  <title>OBSCURA — O Atlas do Sobrenatural</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=IM+Fell+English+SC&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-container" id="inicio">
+    <header class="site-header">
+      <div class="brand">
+        <a class="brand-name" href="#inicio" aria-label="OBSCURA, voltar ao início">OBSCURA</a>
+        <span class="brand-subtitle">O ATLAS DO SOBRENATURAL</span>
+      </div>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="nav-link current" href="#inicio" aria-current="page">Início</a>
+        <a class="nav-link" href="#criaturas">Criaturas</a>
+        <a class="nav-link" href="#sobre">Sobre</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="titulo-principal">
+        <div class="hero-content">
+          <p class="eyebrow">UM ATLAS DO IMPOSSÍVEL</p>
+          <h1 id="titulo-principal">Nem toda lenda é só uma história.</h1>
+          <p class="hero-description">Conheça seres, mitos e mistérios que atravessam gerações.</p>
+          <a class="button-primary" href="#criaturas">Explorar criaturas</a>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="imagens/castelo-obscura.png" alt="Castelo gótico envolto em névoa roxa à luz da lua" width="430" height="452">
+        </div>
+      </section>
+
+      <section class="creatures-section" id="criaturas" aria-labelledby="titulo-criaturas">
+        <div class="section-heading">
+          <h2 id="titulo-criaturas">Criaturas do desconhecido</h2>
+          <p>Explore entidades, lendas e seres que habitam o imaginário de diferentes culturas.</p>
+        </div>
+
+        <!-- Campo ilustrativo: busca textual não disponível neste protótipo HTML + CSS. -->
+        <div class="search-bar" aria-label="Campo de pesquisa ilustrativo, não funcional neste protótipo" title="Pesquisa visual; o filtro por nome não está implementado nesta versão.">
+          <svg class="search-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg>
+          <input type="search" placeholder="Busque por uma criatura..." aria-label="Pesquisa por criatura, indisponível neste protótipo" disabled>
+          <button type="button" disabled aria-label="Busca indisponível neste protótipo">Buscar</button>
+        </div>
+
+        <nav class="categories" aria-label="Navegar até uma categoria de criatura">
+          <a class="category-link" href="#valak">TERROR</a>
+          <a class="category-link" href="#curupira">FOLCLORE</a>
+          <a class="category-link" href="#medusa">MITOLOGIA</a>
+        </nav>
+
+        <div class="cards-grid">
+          <article class="creature-card" id="valak" aria-labelledby="nome-valak">
+            <img src="imagens/valak.png" alt="Representação sombria de Valak na forma de uma freira" width="514" height="514">
+            <div class="card-content">
+              <p class="card-category">TERROR</p>
+              <h3 id="nome-valak">Valak</h3>
+              <p class="card-description">Entidade demoníaca conhecida por sua representação aterrorizante no universo cinematográfico de A Freira.</p>
+            </div>
+          </article>
+          <article class="creature-card" id="curupira" aria-labelledby="nome-curupira">
+            <img src="imagens/curupira.png" alt="Curupira ruivo na floresta, representado como guardião da mata" width="475" height="514">
+            <div class="card-content">
+              <p class="card-category">FOLCLORE</p>
+              <h3 id="nome-curupira">Curupira</h3>
+              <p class="card-description">Protetor das florestas brasileiras, conhecido pelos cabelos avermelhados e pelos pés voltados para trás.</p>
+            </div>
+          </article>
+          <article class="creature-card" id="medusa" aria-labelledby="nome-medusa">
+            <img src="imagens/medusa.png" alt="Medusa da mitologia grega com serpentes no lugar dos cabelos" width="510" height="514">
+            <div class="card-content">
+              <p class="card-category">MITOLOGIA</p>
+              <h3 id="nome-medusa">Medusa</h3>
+              <p class="card-description">Figura da mitologia grega, conhecida pelos cabelos de serpentes e pelo olhar capaz de transformar pessoas em pedra.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" id="sobre" aria-labelledby="titulo-sobre">
+        <p class="eyebrow">SOBRE O ATLAS</p>
+        <h2 id="titulo-sobre">Toda lenda tem uma origem.</h2>
+        <p>OBSCURA é um atlas visual dedicado à exploração de criaturas, entidades e mitos presentes em diferentes culturas e histórias. Uma coleção de relatos que atravessam o imaginário humano.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-logo" href="#inicio" aria-label="OBSCURA, voltar ao início">OBSCURA</a>
+      <p>O Atlas do Sobrenatural</p>
+    </footer>
+  </div>
+</body>
+</html>

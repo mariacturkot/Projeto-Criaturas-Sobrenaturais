@@ -1,0 +1,205 @@
+/* OBSCURA — O Atlas do Sobrenatural
+   Versão exclusivamente MOBILE, inspirada no protótipo do Figma.
+   HTML + CSS, sem JavaScript. */
+:root {
+  --bg: #12121B;
+  --surface: #211D2A;
+  --chip: #312838;
+  --gold: #D8B47B;
+  --ivory: #F2E8D8;
+  --lavender: #C7B7C8;
+  --border: #5A485D;
+  --divider: #48404E;
+  --font-logo: 'IM Fell English SC', Georgia, serif;
+  --font-title: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--ivory);
+  font: 400 16px/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+p, h1, h2, h3 { margin: 0; }
+/* Centraliza a página no computador e mantém largura de celular. */
+.site-container { width: calc(100% - 40px); max-width: 350px; margin-inline: auto; }
+
+/* Cabeçalho */
+.site-header {
+  min-height: 161px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+  border-bottom: 1px solid var(--divider);
+}
+.brand { display: flex; flex-direction: column; align-items: flex-start; }
+.brand-name {
+  color: var(--gold);
+  font: 400 32px/1.2 var(--font-logo);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.brand-subtitle { margin-top: 4px; color: var(--lavender); font-size: 11px; font-weight: 500; letter-spacing: 1px; }
+.main-nav { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.nav-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 9px;
+  color: var(--ivory);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .18s ease;
+}
+.nav-link.current, .nav-link:hover { color: var(--gold); }
+
+/* Hero: texto acima da imagem */
+.hero {
+  margin-top: 22px;
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: var(--surface);
+  border-radius: 20px;
+}
+.eyebrow { color: var(--gold); font: 600 12px/1.6 var(--font-body); letter-spacing: 1px; }
+h1, h2, h3 { font-family: var(--font-title); }
+.hero h1 {
+  margin-top: 17px;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -.35px;
+}
+.hero-description { margin-top: 20px; color: var(--lavender); font-size: 16px; line-height: 1.65; }
+.button-primary {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 26px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: var(--bg);
+  background: var(--gold);
+  font: 600 15px/1.2 var(--font-body);
+  text-decoration: none;
+  text-align: center;
+  transition: background .18s ease;
+}
+.button-primary:hover { background: #EAC894; }
+.hero-image-wrap { height: 300px; overflow: hidden; background: var(--chip); border-radius: 12px; }
+.hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+/* Catálogo */
+.creatures-section { margin-top: 56px; }
+.section-heading h2 { font-size: 38px; font-weight: 700; line-height: 1.08; }
+.section-heading p { margin-top: 15px; font-size: 16px; color: var(--lavender); line-height: 1.55; }
+.search-bar {
+  height: 54px;
+  margin-top: 25px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.search-icon { width: 19px; height: 19px; margin-left: 9px; flex-shrink: 0; color: var(--lavender); }
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--lavender);
+  font: 400 15px/1.2 var(--font-body);
+  opacity: 1;
+  -webkit-text-fill-color: var(--lavender);
+}
+.search-bar input::placeholder { color: var(--lavender); opacity: 1; }
+.search-bar button {
+  width: 90px;
+  height: 44px;
+  flex: none;
+  padding: 0;
+  border: 0;
+  border-radius: 9px;
+  background: var(--gold);
+  color: var(--bg);
+  opacity: 1;
+  font: 600 14px var(--font-body);
+  cursor: not-allowed;
+}
+.categories { margin-top: 30px; margin-bottom: 35px; display: flex; gap: 8px; }
+.category-link {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 2px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--chip);
+  color: var(--ivory);
+  font: 500 12px/1.2 var(--font-body);
+  letter-spacing: .1px;
+  text-decoration: none;
+  transition: border-color .18s ease, background .18s ease;
+}
+.category-link:hover { background: #403348; border-color: var(--gold); }
+
+/* Cartões em coluna única */
+.cards-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.creature-card {
+  min-height: 510px;
+  min-width: 0;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--surface);
+  transition: background .18s ease, outline .18s ease;
+}
+.creature-card:hover, .creature-card:target { background: #292333; outline: 1px solid var(--border); }
+.creature-card img { width: 100%; height: 260px; object-fit: cover; object-position: center 35%; border-radius: 8px; }
+.card-content { padding: 16px 4px 0; }
+.card-category { font: 600 13px/1.5 var(--font-body); letter-spacing: 1px; color: var(--gold); }
+.card-content h3 { margin-top: 5px; font-size: 34px; font-weight: 600; line-height: 1.2; }
+.card-description { margin-top: 10px; color: var(--lavender); font-size: 16px; line-height: 1.5; font-style: italic; }
+
+/* Sobre */
+.about-section {
+  min-height: 400px;
+  margin-top: 57px;
+  padding: 32px 24px 38px;
+  background: var(--surface);
+  border-radius: 20px;
+}
+.about-section h2 { margin-top: 23px; font-size: 40px; font-weight: 700; line-height: 1.08; }
+.about-section > p:last-child { margin-top: 24px; color: var(--lavender); font-size: 16px; line-height: 1.65; font-style: italic; }
+
+/* Rodapé */
+.site-footer { margin-top: 95px; padding: 24px 0 75px; border-top: 1px solid var(--divider); }
+.footer-logo { display: inline-block; color: var(--gold); font: 400 28px/1.3 var(--font-logo); text-decoration: none; }
+.site-footer p { margin-top: 4px; color: var(--lavender); font-size: 14px; }
+
+/* Navegação acessível */
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+section[id], article[id] { scroll-margin-top: 24px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}

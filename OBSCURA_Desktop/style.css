@@ -1,0 +1,197 @@
+/* OBSCURA — edição Desktop (HTML e CSS, sem versão mobile). */
+:root {
+  --bg: #12121B;
+  --surface: #211D2A;
+  --chip: #312838;
+  --gold: #D8B47B;
+  --ivory: #F2E8D8;
+  --lavender: #C7B7C8;
+  --border: #5A485D;
+  --divider: #48404E;
+  --font-logo: 'IM Fell English SC', Georgia, serif;
+  --font-title: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 1248px; /* mantém a disposição desktop em qualquer janela */
+  background: var(--bg);
+  color: var(--ivory);
+  font: 400 16px/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.site-container { max-width: 1200px; width: calc(100% - 48px); margin: 0 auto; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+p, h1, h2, h3 { margin: 0; }
+
+/* Cabeçalho */
+.site-header {
+  min-height: 117px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  border-bottom: 1px solid var(--divider);
+}
+.brand { display: flex; flex-direction: column; align-items: flex-start; }
+.brand-name {
+  font: 400 40px/1.13 var(--font-logo);
+  color: var(--gold);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.brand-subtitle {
+  margin-top: 5px;
+  color: var(--lavender);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.main-nav { display: flex; gap: 46px; align-items: center; padding-right: 53px; }
+.nav-link { font-size: 16px; font-weight: 500; text-decoration: none; transition: color .18s ease; }
+.nav-link.current, .nav-link:hover { color: var(--gold); }
+
+/* Hero */
+.hero {
+  margin-top: 43px;
+  height: 535px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 465px;
+  gap: 45px;
+  align-items: center;
+  padding: 20px 40px 20px 64px;
+  border-radius: 20px;
+  background: #181620;
+}
+.hero-content { min-width: 0; max-width: 560px; }
+.eyebrow { color: var(--gold); font-size: 14px; font-weight: 600; letter-spacing: 1px; }
+h1, h2, h3 { font-family: var(--font-title); }
+.hero h1 {
+  max-width: 560px;
+  margin-top: 21px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.03;
+  letter-spacing: -.5px;
+}
+.hero-description { max-width: 500px; margin-top: 27px; color: var(--lavender); font-size: 18px; line-height: 1.5; }
+.button-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 47px;
+  min-height: 52px;
+  padding: 10px 28px;
+  border-radius: 8px;
+  color: var(--bg);
+  background: var(--gold);
+  font: 600 16px/1.2 var(--font-body);
+  text-decoration: none;
+  transition: background .18s ease, transform .18s ease;
+}
+.button-primary:hover { background: #EAC894; transform: translateY(-2px); }
+.hero-image-wrap { width: 100%; height: 490px; overflow: hidden; background: var(--chip); border-radius: 14px; }
+.hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Criaturas, pesquisa e categorias */
+.creatures-section { margin-top: 91px; }
+.section-heading h2 { font: 700 48px/1.15 var(--font-title); }
+.section-heading p { margin-top: 14px; font-size: 17px; color: var(--lavender); }
+.search-bar {
+  margin-top: 23px;
+  width: 720px;
+  height: 56px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.search-icon { flex: none; margin-left: 14px; color: var(--lavender); }
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  outline: none;
+  border: 0;
+  background: transparent;
+  font: 400 16px var(--font-body);
+  color: var(--lavender);
+  opacity: 1;
+  -webkit-text-fill-color: var(--lavender);
+}
+.search-bar input::placeholder { color: var(--lavender); opacity: 1; }
+.search-bar button {
+  border: 0;
+  width: 112px;
+  height: 44px;
+  border-radius: 9px;
+  background: var(--gold);
+  color: var(--bg);
+  font: 600 15px var(--font-body);
+  opacity: 1;
+  cursor: not-allowed;
+}
+.categories { margin-top: 30px; margin-bottom: 31px; display: flex; flex-wrap: wrap; gap: 16px; }
+.category-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 140px;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--chip);
+  color: var(--ivory);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .5px;
+  text-decoration: none;
+  transition: background .18s ease, border-color .18s ease;
+}
+.category-link:hover { background: #413348; border-color: var(--gold); }
+
+.cards-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.creature-card {
+  min-width: 0;
+  min-height: 520px;
+  border-radius: 14px;
+  padding: 16px;
+  background: var(--surface);
+  transition: transform .18s ease, background .18s ease, outline .18s ease;
+}
+.creature-card:hover, .creature-card:target { background: #292333; outline: 1px solid var(--border); transform: translateY(-2px); }
+.creature-card img { width: 100%; height: 280px; border-radius: 8px; object-fit: cover; object-position: center 35%; }
+.card-content { padding: 17px 19px 0; }
+.card-category { color: var(--gold); font: 600 13px/1.5 var(--font-body); letter-spacing: 1px; }
+.card-content h3 { margin-top: 5px; font-size: 34px; font-weight: 600; line-height: 1.2; }
+.card-description { margin-top: 11px; font-size: 16px; line-height: 1.5; font-style: italic; color: var(--lavender); }
+
+/* Sobre */
+.about-section {
+  margin-top: 110px;
+  min-height: 300px;
+  padding: 43px 60px 55px;
+  border-radius: 20px;
+  background: var(--surface);
+}
+.about-section h2 { margin-top: 13px; font-size: 48px; font-weight: 700; line-height: 1.15; }
+.about-section > p:last-child { max-width: 1050px; margin-top: 25px; color: var(--lavender); font-size: 18px; font-style: italic; line-height: 1.65; }
+
+/* Rodapé */
+.site-footer { margin-top: 110px; padding: 24px 0 50px; border-top: 1px solid var(--divider); }
+.footer-logo { display: inline-block; color: var(--gold); font: 400 36px/1.25 var(--font-logo); text-decoration: none; }
+.site-footer p { margin-top: 1px; color: var(--lavender); font-size: 14px; }
+
+/* Acessibilidade */
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+section[id], article[id] { scroll-margin-top: 24px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}

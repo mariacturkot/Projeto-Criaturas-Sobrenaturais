@@ -1,0 +1,18 @@
+OBSCURA — O Atlas do Sobrenatural | VERSÃO MOBILE
+
+1. Extraia o arquivo ZIP.
+2. Abra a pasta OBSCURA_Mobile.
+3. Dê dois cliques em index.html para abrir no navegador.
+4. Para visualizar como celular no computador: pressione F12 no navegador, ative o modo de dispositivo móvel e escolha 390 x 844.
+
+Arquivos:
+- index.html: conteúdo do site.
+- style.css: estilos pensados somente para celular.
+- imagens/: arquivos visuais locais utilizados pela página.
+
+Interações:
+- Início, Criaturas, Sobre, Explorar criaturas e categorias levam às respectivas seções/cartões.
+- Barra de pesquisa e botão Buscar são apenas ilustrativos: filtragem textual não é implementada em HTML e CSS puro.
+- Sem JavaScript.
+
+Tipografia: IM Fell English SC, Cormorant Garamond e Inter (Google Fonts; requer internet para carregamento dessas fontes).
